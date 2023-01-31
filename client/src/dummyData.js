@@ -6,32 +6,32 @@ export const Users = [
     },
     {
       id:2,
-      profilePicture: "person/sun.png",
+      profilePicture: "person/sun.PNG",
       username: "Rony",
     },
     {
       id:3,
-      profilePicture: "person/light.png",
+      profilePicture: "person/light.PNG",
       username: "Raihan Rony",
     },
     {
       id:4,
-      profilePicture: "person/nature.png",
+      profilePicture: "person/nature.PNG",
       username: "Raihanul Rony",
     },
     {
       id:5,
-      profilePicture: "person/tree.png",
+      profilePicture: "person/tree.PNG",
       username: "Rony Raihan",
     },
     {
       id:6,
-      profilePicture: "person/drop.png",
+      profilePicture: "person/drop.PNG",
       username: "Shah",
     },
     {
       id:7,
-      profilePicture: "person/black.png",
+      profilePicture: "person/black.PNG",
       username: "Shah Raihan",
     },
   ];
