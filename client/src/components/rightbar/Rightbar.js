@@ -20,7 +20,7 @@ export default function Rightbar({ user }) {
   useEffect(() => {
     const getFriends = async () => {
       try {
-        const friendList = await axios.get("http://localhost:8800/api/users/friends/" + user._id); //did work
+        const friendList = await axios.get("https://mern-social-media-app-backend.vercel.app/api/users/friends/" + user._id); //did work
         setFriends(friendList.data);
       } catch (err) {
         console.log(err);
@@ -34,12 +34,12 @@ export default function Rightbar({ user }) {
   const handleClick = async () => {
     try {
       if (followed) {
-        await axios.put(`http://localhost:8800/api/users/${user._id}/unfollow`, {
+        await axios.put(`https://mern-social-media-app-backend.vercel.app/api/users/${user._id}/unfollow`, {
           userId: currentUser._id,
         });
         dispatch({ type: "UNFOLLOW", payload: user._id });
       } else {
-        await axios.put(`http://localhost:8800/api/users/${user._id}/follow`, {
+        await axios.put(`https://mern-social-media-app-backend.vercel.app/api/users/${user._id}/follow`, {
           userId: currentUser._id,
         });
         dispatch({ type: "FOLLOW", payload: user._id });

@@ -10,7 +10,7 @@ export default function Message({message,own}) {
     useEffect(() => {
       const getUser = async () => {
         try {
-          const res = await axios.get("http://localhost:8800/api/users?userId=" + message.sender);
+          const res = await axios.get("https://mern-social-media-app-backend.vercel.app/api/users?userId=" + message.sender);
           setUser(res.data);
         } catch (err) {
           console.log(err);

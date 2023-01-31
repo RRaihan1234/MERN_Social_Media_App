@@ -14,7 +14,7 @@ export default function Profile() {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const res = await axios.get(`http://localhost:8800/api/users?username=${username}`);
+      const res = await axios.get(`https://mern-social-media-app-backend.vercel.app/api/users?username=${username}`);
       setUser(res.data);
     };
     fetchUser();

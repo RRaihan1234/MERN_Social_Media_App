@@ -9,7 +9,7 @@ export default function ChatOnline({ onlineUsers, currentId, setCurrentChat }) {
 
   useEffect(() => {
     const getFriends = async () => {
-      const res = await axios.get("http://localhost:8800/api/users/friends/" + currentId);
+      const res = await axios.get("https://mern-social-media-app-backend.vercel.app/api/users/friends/" + currentId);
       setFriends(res.data);
     };
 
@@ -23,7 +23,7 @@ export default function ChatOnline({ onlineUsers, currentId, setCurrentChat }) {
   const handleClick = async (user) => {
     try {
       const res = await axios.get(
-        `http://localhost:8800/api/conversations/find/${currentId}/${user._id}`
+        `https://mern-social-media-app-backend.vercel.app/api/conversations/find/${currentId}/${user._id}`
       );
       setCurrentChat(res.data);
     } catch (err) {
