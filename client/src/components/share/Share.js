@@ -25,7 +25,9 @@ export default function Share() {
       
       try {
         await axios.post("https://mern-social-media-app-backend.vercel.app/api/upload", data);
-      } catch (err) {}
+      } catch (err) {
+        console.log(err)
+      }
     }
 
     try {
